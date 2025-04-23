@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wdid"
+version = "0.0.1" 
+authors = [
+  { name="Ufuk Cakir", email="ufukcakir@robots.ox.ac.uk" }, 
+]
+description = "What did I do? CLI tool to aggregate and summarize daily notes, potentially using a local LLM."
+readme = "README.md"
+requires-python = ">=3.8" 
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License", 
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Utilities",
+    "Topic :: Text Processing",
+]
+dependencies = [
+    "typer>=0.9.0", 
+    "inquirer>=3.1.0",
+    "ollama>=0.1.8", 
+]
+
+[project.scripts]
+wdid = "wdid.cli:app" 
